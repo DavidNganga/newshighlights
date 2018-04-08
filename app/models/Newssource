@@ -1,6 +1,6 @@
-class Movie:
+class Newssource:
     '''
-    Movie class to define Movie Objects
+     
     '''
 
     def __init__(self,title):

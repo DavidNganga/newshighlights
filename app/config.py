@@ -4,7 +4,7 @@ class Config:
     '''
     pass
 
-    NEWS_API_BASE_URL = 'https://newsapi.org/v2/sources?apiKey={}'
+    NEWS_API_BASE_URL = 'https://newsapi.org/v1/sources?apiKey={}'
 
 class ProdConfig(Config):
     '''
