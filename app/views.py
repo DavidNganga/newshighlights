@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from .request import get_news
+from .request import get_sources
 # Views
 @app.route('/')
 def index():
@@ -8,7 +8,7 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    category_news = get_news('category')
+    category_news = get_sources('source')
     print(category_news)
     title = 'Home'
     message = 'On the news today!!'
