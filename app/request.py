@@ -1,7 +1,8 @@
 import urllib.request,json
-from .models import Newssource,Newsarticle
+from .models import Newssource
 
-Newssource = Newssource.Newssource
+
+# Newssource = Newssource.Newssource
 # Newsarticle =Newsarticle.Newsarticle
 
 # Getting api key
@@ -35,9 +36,7 @@ def get_sources(source):
 
  
 def process_results(source_list):
-    '''
-    Function  that processes the movie result and transform them to a list of Objects
-    '''
+   
     
     source_results = []
 

@@ -2,7 +2,7 @@ from flask import render_template,request,redirect,url_for
 from . import main
 from ..request import get_sources
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -17,7 +17,7 @@ def index():
     message = 'On the news today!!'
     return render_template('index.html',title = title, message = message, sources=category_news)
 
-@app.route('/news/<int:news_id>')
+@main.route('/news/<int:news_id>')
 def news(news_id):
 
    
