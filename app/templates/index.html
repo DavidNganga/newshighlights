@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> Home </title>
-        {% endif %}
-    </head>
-    <body>
+{% extends 'base.html'%}
+
+        {% block content%} 
+        <h3> news </h3>
          
-        <h3> category </h3>
-         <ul>
-            {% for category_news in category %}
-                <li>{{ popular_news.title}}</li>
+            {% for source in sources %}
+            <br>
+            {{source.name}}
+            <br>
+            {{source.description}}
+            <li>  <a href="{{source.url}}">Link</a>         </li>
             {% endfor %}
-        </ul>
- </body>
-</html>
+        {% endblock%}
+            
+
