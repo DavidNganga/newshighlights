@@ -2,14 +2,34 @@
 
         {% block content%} 
         <h3> news </h3>
-         
+        {% block styles%}
+        {{ super() }}
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+        {% endblock%}
+        <div class="container-fluid mt-4">
+            <div class="row mt-4 mb-4">
+            
+            </div>
+            </div>
+            <div class="container-fluid mt-4">
+              <div class="jumbotron mt-4">
+                <h1 class="display-4 text-center">Hello!</h1>
+                <p class="lead text-center">Welcome to News Source!</p>
+</div>
+
+            </div>    
+            <div class="work">
             {% for source in sources %}
             <br>
+            
             {{source.name}}
             <br>
+            <br>
             {{source.description}}
-            <li>  <a href="{{source.url}}">Link</a>         </li>
+            <br>
+             <a href="/article/{{source.id}}">Link</a>            
             {% endfor %}
+        </div>
         {% endblock%}
             
 
