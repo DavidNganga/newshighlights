@@ -13,24 +13,39 @@
             </div>
             <div class="container-fluid mt-4">
               <div class="jumbotron mt-4">
-                <h1 class="display-4 text-center">Hello!</h1>
-                <p class="lead text-center">Welcome to News Source!</p>
+                <h1 class="display-4 text-center">Hello</h1>
+                <p class="lead text-center">Welcome to your daily News Source</p>
 </div>
 
             </div>    
-            <div class="work">
+            <div class="container">
+            <div class="row mt-4 mb-4">
             {% for source in sources %}
             <br>
-            
-            {{source.name}}
+            <div class="container">
+            <div class="row mt-4 mb-4">
+            <strong>{{source.name}}</strong> 
+            </div>
+            </div>
             <br>
             <br>
+            <div class="container">
+            <div class="row mt-4 mb-4">
             {{source.description}}
+            </div>
+            </div>
             <br>
-             <a href="/article/{{source.id}}">Link</a> 
+            <div class="container">
+            <div class="row mt-4 mb-4">
+            <button> <a href="/article/{{source.id}}">More Articles</a>  </button>  
+            </div>
+            </div>
+            </div>                      
+             
              <br>           
             {% endfor %}
-        </div>
+          </div>
+      </div>
         {% endblock%}
             
 
