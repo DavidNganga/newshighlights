@@ -5,9 +5,16 @@
 
      {% for article in articles %}
     
-    <p>{{article.name}}</p>
+    <p><strong{{article.name}}</strong></p>
     <p> {{article.descriptiion}}  </p>
     <p>{{article.title }}</p>
+        <img src="{{article.url}} "> 
+        <br>
+        <br>    
+     <a href="  {{article.urlToImage}}">Read Article</a>
+     <br>
+     <br>
+
         {% endfor %}
     
 
